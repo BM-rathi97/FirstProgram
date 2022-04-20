@@ -1,0 +1,29 @@
+package org.task;
+
+import java.util.Date;
+
+import org.base.BaseClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+
+public class Task1 extends BaseClass{
+	
+	@BeforeClass
+	
+	private void beforeclass()
+	{
+		launchbrowser("chrome");
+	}
+	
+	@BeforeMethod
+	
+	private void beforemethod()
+	{
+		Date d=new Date();
+		System.out.println("Test Starting Time is"+ d);
+	}
+	
+		
+	
+
+}

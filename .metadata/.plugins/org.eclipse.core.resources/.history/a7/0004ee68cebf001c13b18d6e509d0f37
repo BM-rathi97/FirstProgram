@@ -1,0 +1,15 @@
+package org.task;
+
+import org.base.BaseClass;
+import org.openqa.selenium.support.PageFactory;
+
+public class loginPage extends BaseClass {
+	
+	public loginPage()
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+
+}

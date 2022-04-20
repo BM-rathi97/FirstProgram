@@ -1,0 +1,52 @@
+package org.task;
+
+import java.util.Date;
+
+import javax.naming.directory.SearchResult;
+
+import org.base.BaseClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import net.bytebuddy.asm.Advice.Enter;
+
+public class Task1 extends BaseClass{
+	
+	@BeforeClass
+	
+	private void beforeclass()
+	{
+		launchbrowser("chrome");
+	}
+	
+	@BeforeMethod
+	
+	private void beforemethod()
+	{
+		Date d=new Date();
+		System.out.println("Test Starting Time is"+ d);
+	}
+	
+	@Test
+	
+	private void test1()
+	{
+		urlLaunch("https://www.flipkart.com/");
+		maximize();
+		implicityWait(20);
+		loginPage lp=new loginPage();
+		
+	    sendkeys(lp.getSearchBoxName(), "iphone");
+	    enter();
+	    
+	    
+		
+		
+		
+		
+	}
+		
+	
+
+}
